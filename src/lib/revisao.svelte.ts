@@ -89,6 +89,9 @@ function carregar(): Estado {
 
 export const revisao = $state<Estado>(carregar());
 
+// Garante campo novo mesmo se o hot-reload trouxer estado antigo em memória.
+if (!Array.isArray(revisao.alertas)) revisao.alertas = [];
+
 function persistir() {
 	localStorage.setItem(CHAVE, JSON.stringify(revisao));
 }

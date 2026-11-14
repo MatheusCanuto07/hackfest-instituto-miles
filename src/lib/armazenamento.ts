@@ -1,6 +1,6 @@
 // Ao mudar a estrutura dos dados salvos, incremente a versão:
 // dados antigos salvos no navegador podem não ser mais compatíveis.
-const VERSAO = '4';
+const VERSAO = '5';
 
 function apagarTudo() {
 	for (const chave of Object.keys(localStorage)) {
